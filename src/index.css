@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+.bug-background{
+    background : url(../public/assets/backgrounds/bug.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.fire-background{
+    background : url(../public/assets/backgrounds/fire.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.dark-background{
+    background : url(../public/assets/backgrounds/dark.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.dragon-background{
+    background : url(../public/assets/backgrounds/dragon.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.fairy-background{
+    background : url(../public/assets/backgrounds/fairy.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.electric-background{
+    background : url(../public/assets/backgrounds/electric.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.fighting-background{
+    background : url(../public/assets/backgrounds/fighting.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.flying-background{
+    background : url(../public/assets/backgrounds/flying.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.ghost-background{
+    background : url(../public/assets/backgrounds/ghost.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.grass-background{
+    background : url(../public/assets/backgrounds/grass.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.ground-background{
+    background : url(../public/assets/backgrounds/ground.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.ice-background{
+    background : url(../public/assets/backgrounds/ice.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.normal-background{
+    background : url(../public/assets/backgrounds/normal.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.poison-background{
+    background : url(../public/assets/backgrounds/poison.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.psychic-background{
+    background : url(../public/assets/backgrounds/psychic.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.rock-background{
+    background : url(../public/assets/backgrounds/rock.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.steel-background{
+    background : url(../public/assets/backgrounds/steel.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.water-background{
+    background : url(../public/assets/backgrounds/water.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
