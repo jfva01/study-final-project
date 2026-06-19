@@ -5,6 +5,7 @@ import { useMemo } from "react"
 import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter"
 import { convertHectogramsToKg } from "../../utils/convertHectogramsToKg"
 import { convertDecimetresToCm } from "../../utils/convertDecimetresToCm"
+import { PokemonSprites } from "../PokemonSprites/PokemonSprites"
 
 
 export const PokemonInfo = () =>{
@@ -24,6 +25,7 @@ export const PokemonInfo = () =>{
                 <h1 className="text-3xl">{capitalizeFirstLetter(pokemonData?.name ?? "")}</h1>
                 <p>{`Weight: ${convertHectogramsToKg(pokemonData?.weight ?? 0)} kg`}</p>
                 <p>{`Height: ${convertDecimetresToCm(pokemonData?.height ?? 0)} cm`}</p>
+                <PokemonSprites pokemonName={pokemonName} />
             </div>
         </div>
     )
