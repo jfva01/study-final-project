@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { useMemo, MouseEvent } from "react"
 import { FaHeart, FaRegHeart } from "react-icons/fa6"
 import { useFavoriteStore } from "../../../store/useFavoriteStore"
 import { useShallow } from "zustand/shallow"
@@ -14,7 +14,8 @@ export const FavoriteButton = ({ pokemonId }: FavoriteButtonProps) => {
     const isFavorite = useMemo(() =>
         favorites.includes(pokemonId.toString()), [favorites, pokemonId])
 
-    const onClick = () => {
+    const onClick = (e: MouseEvent) => {
+        e.stopPropagation();
         const idToModify = pokemonId.toString();
         isFavorite ? deleteFavorite(idToModify) : addFavorite(idToModify);
     }

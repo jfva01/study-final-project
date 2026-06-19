@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router";
 
 const Pokedex = lazy(() => import("../views/Pokedex"));
+const PokemonProfile = lazy(() => import("../views/PokemonProfile"));
 
 const AppRoutes = () => {
     return(
@@ -10,6 +11,9 @@ const AppRoutes = () => {
                 <Route 
                     path="/" 
                     element = {<Pokedex />} />
+                <Route 
+                    path="/pokemon/:pokemonName" 
+                    element = {<PokemonProfile />} />
             </Routes>
         </Suspense>
     )

@@ -5,6 +5,7 @@ import { getMainPokemonType } from '../../utils/getMainPokemonType';
 import { Label } from '../Shared/Label/Label';
 import { capitalizeFirstLetter } from '../../utils/capitalizeFirstLetter';
 import { FavoriteButton } from '../Shared/Button/FavoriteButton';
+import { useNavigate } from 'react-router';
 
 interface PokemonCardProps{
     pokemon?: PokemonListItem;
@@ -14,9 +15,14 @@ interface PokemonCardProps{
 export const PokemonCard = ({ pokemon, pokemonId }: PokemonCardProps ) => {
     const { pokemonData } = useGetPokemon(pokemon?.name, pokemonId);
     const mainType = useMemo(() => pokemonData && getMainPokemonType(pokemonData),[pokemonData]);
+    const navigate = useNavigate();
+
+    const onClick = () => {
+        navigate(`/pokemon/${pokemonData?.name}`);
+    }
 
     return(
-        <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4`}>
+        <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`} onClick={onClick}>
             <FavoriteButton pokemonId={pokemonData?.id ?? 0} />
             <div className='flex flex-col items-center mx-auto'>
                 <Label>{ pokemonData?.name ? capitalizeFirstLetter(pokemonData?.name) : "" }</Label>
