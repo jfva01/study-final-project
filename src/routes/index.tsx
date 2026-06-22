@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 
 const Pokedex = lazy(() => import("../views/Pokedex"));
 const PokemonProfile = lazy(() => import("../views/PokemonProfile"));
+const PokemonByType = lazy(() => import("../views/PokemonType"))
 
 const AppRoutes = () => {
     return(
@@ -14,6 +15,9 @@ const AppRoutes = () => {
                 <Route 
                     path="/pokemon/:pokemonName" 
                     element = {<PokemonProfile />} />
+                <Route 
+                    path="/type/:typeName" 
+                    element = {<PokemonByType />} />
             </Routes>
         </Suspense>
     )

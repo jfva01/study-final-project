@@ -1,4 +1,3 @@
-
 export interface PokemonType{
     slot: number,
     type:{
@@ -13,7 +12,6 @@ export interface PokemonSprites{
     front_shiny?: string,
     back_shiny?: string
 }
-
 
 export interface PokemonData{
     name: string,
