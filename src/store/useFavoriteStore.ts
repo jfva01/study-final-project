@@ -8,8 +8,11 @@ interface FavoriteStore{
     deleteFavorite: (id:string) => void;
 }
 
+const storedFavorites = localStorage.getItem("favorite-pokemons");
+const favorites: string[] = storedFavorites ? storedFavorites.split(",").filter(Boolean) : [];
+
 export const useFavoriteStore = create<FavoriteStore>((set) =>({
-    favorites: localStorage.getItem("favorite-pokemons")?.split(",") || [],
+    favorites,
     addFavorite: (id: string) => { 
         set((state) => {
             const favorites = [...state.favorites, id];

@@ -1,4 +1,4 @@
-import { PokemonByTypeList } from "../components/PokemonListByType/pokemonListByType"
+import { PokemonByTypeList } from "../components/PokemonListByType/PokemonListByType"
 
 const PokemonByType = () => {
     return(
