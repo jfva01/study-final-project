@@ -7,7 +7,7 @@ import { convertHectogramsToKg } from "../../utils/convertHectogramsToKg"
 import { convertDecimetresToCm } from "../../utils/convertDecimetresToCm"
 import { PokemonSprites } from "../PokemonSprites/PokemonSprites"
 import { TypeIcons } from "../Shared/TypeIcons/TypeIcons"
-
+import { useSearchStore } from "../../store/useSearchStore"
 
 export const PokemonInfo = () =>{
     const { pokemonName } = useParams();
