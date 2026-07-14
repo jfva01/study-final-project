@@ -18,6 +18,7 @@ export const PokemonInfo = () =>{
         <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg">
             <div className={`${mainType}-background w-72 h-72 rounded-l-lg items-center`}>
                 <img
+                    data-testid="pokemon-main-image"
                     src={pokemonData?.sprites?.front_default}
                     alt={pokemonData?.name ?? ""} className="mx-auto w-72 h-72"
                 />
