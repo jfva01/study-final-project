@@ -2,7 +2,7 @@ import { useGetPokemonList } from "../../hooks/useGetPokemonList"
 import { PokemonCard } from "../PokemonCard/PokemonCard";
 import { Grid } from "../Shared/Grid/Grid";
 
-const PokemonList = () => {
+export const PokemonList = () => {
     const { pokemonList, goToNextPage, goToPreviousPage } = useGetPokemonList();
 
     return(
@@ -16,5 +16,3 @@ const PokemonList = () => {
         </Grid>
     )
 }
-
-export default PokemonList;

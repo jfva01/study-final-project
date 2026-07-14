@@ -26,16 +26,23 @@ export const PokemonCard = ({ pokemon, pokemonId }: PokemonCardProps ) => {
     }
 
     return(
-        <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`} onClick={onClick}>
-            <FavoriteButton pokemonId={pokemonData?.id ?? 0} />
-            <TypeIcons types={pokemonData?.types ?? []} />
-            <div className='flex flex-col items-center mx-auto'>
-                <Label>{ pokemonData?.name ? capitalizeFirstLetter(pokemonData?.name) : "" }</Label>
-                <img 
-                    src={ pokemonData?.sprites?.front_default }
-                    alt={ pokemonData?.name ?? "" } 
-                />
-            </div>
+        <div 
+            data-testid="pokemon-card" 
+            className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`} 
+            onClick={onClick}
+        >
+            {pokemonData && (<>
+                <FavoriteButton pokemonId={pokemonData?.id ?? 0} />
+                <TypeIcons types={pokemonData?.types ?? []} />
+                <div className='flex flex-col items-center mx-auto'>
+                    <Label>{ pokemonData?.name ? capitalizeFirstLetter(pokemonData?.name) : "" }</Label>
+                    <img 
+                        src={ pokemonData?.sprites?.front_default }
+                        alt={ pokemonData?.name ?? "" } 
+                    />
+                </div>
+            </>
+            )}
         </div>
     )
 }
