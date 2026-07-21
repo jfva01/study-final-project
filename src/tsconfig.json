@@ -15,7 +15,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["vite/client", "@testing-library/jest-dom"]
+    "types": ["vite/client", "@testing-library/jest-dom", "node"]
   },
-  "include": ["src"]
+  "include": ["src", "playwright.config.ts", "e2e/**/*.ts"],
 }

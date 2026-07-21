@@ -22,6 +22,7 @@ export const TypeIcons = ({types}: TypeIconsProps) =>{
                     key={type.type.name} 
                     className="bg-white p-1 rounded-full w-6 h-6 mb-1" 
                     onClick={(e) => onClick(e, type)}
+                    data-testid="type-icon"
                 >
                     <img
                         src={mapTypeToIcon(type)}

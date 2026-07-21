@@ -8,7 +8,7 @@ export const PokemonSprites = ({ pokemonName }: PokemonSpritesProps) =>{
     const { pokemonData } = useGetPokemon(pokemonName);
 
     return(
-        <div className="flex flex-row">
+        <div data-testid="pokemon-sprites" className="flex flex-row">
             <div>
                 {pokemonData?.sprites?.front_default && (
                     <>
