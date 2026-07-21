@@ -21,7 +21,7 @@ export const FavoriteButton = ({ pokemonId }: FavoriteButtonProps) => {
     }
 
     return(
-        <button className="cursor-pointer bg-white p-1 rounded-full absolute top-2 left-2" onClick={onClick}>
+        <button data-testid="favorite-button" className="cursor-pointer bg-white p-1 rounded-full absolute top-2 left-2" onClick={onClick}>
             { isFavorite ? <FaHeart fill="#ef4444" /> : <FaRegHeart  fill="#ef4444"/> }
         </button>
     )

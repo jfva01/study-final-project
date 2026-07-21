@@ -13,8 +13,8 @@ export const Grid = ({ children, goToPreviousPage, goToNextPage }: GridProps) =>
                 { children }
             </div>
             <div className="flex justify-center mt-4 gap-5">
-                { goToPreviousPage && <button onClick={goToPreviousPage}>Previous</button> }
-                { goToNextPage && <button onClick={goToNextPage}>Next</button> }
+                { goToPreviousPage && <button data-testid="previous-button" onClick={goToPreviousPage}>Previous</button> }
+                { goToNextPage && <button data-testid="next-button" onClick={goToNextPage}>Next</button> }
             </div>
         </div>
     )
