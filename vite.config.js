@@ -15,6 +15,7 @@ const assetStubPlugin = {
 
 export default defineConfig({
   plugins: [
+    assetStubPlugin,
     react(),
     legacy({
       targets: ['defaults', 'not IE 11']
@@ -24,6 +25,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: './src/setupTests.ts'
+    setupFiles: './src/setupTests.ts',
+    exclude: ['**/node_modules/**', '**/e2e/**']
   }
 })
